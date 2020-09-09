@@ -29,7 +29,7 @@ function Lens(){
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:8181/lens", input);
+      await axios.post("http://localhost:8080/lens", input);
 
     }catch(e) {
       console.error(e, e.message)
@@ -41,7 +41,7 @@ function Lens(){
     const { id } = e.target;
 
     try{
-      axios.delete('http://localhost:8181/lens/' + id)
+      axios.delete('http://localhost:8080/lens/' + id)
     }catch(e) {
       console.error(e, e.message)
     }
@@ -71,13 +71,13 @@ function Lens(){
         </form>
 
         <h3>Cameras:</h3> 
-        {lens ?  lens.map(len => <Lens camera={len} deleteLens={deleteLens} />) : "Loading ..."  }
+        {lens ?  lens.map(len => <Len camera={len} deleteLens={deleteLens} />) : "Loading ..."  }
 
     </div>
   )
 
 }
-function Book (props) {
+function Len (props) {
   return(
     <div>
       <h1>  { props.lens.name} </h1>

@@ -41,7 +41,7 @@ function Cameras() {
     const { id } = e.target;
 
     try{
-      axios.delete('http://localhost:5432/camera/' + id)
+      axios.delete('http://localhost:8080/camera/' + id)
     }catch(e) {
       console.error(e, e.message)
     }
