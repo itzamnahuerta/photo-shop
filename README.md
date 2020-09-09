@@ -5,7 +5,8 @@ This is an e-commerce website that offers you the best cameras, lens, and tripod
 
 ## Frontend Installation 
 1. cd `client`
-2. `npm start`
+2. `npm i `
+3. `npm start`
 
 ## Backend Installation 
 
